@@ -1,0 +1,9 @@
+.page-body {
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-style: normal;
+  color: $color-tangaroa;
+  background-color: $color-default-white;
+  min-height: 320px;
+  display: grid;
+  grid-template-rows: min-content max-content min-content;
+}
