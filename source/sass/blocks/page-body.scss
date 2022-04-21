@@ -3,7 +3,7 @@
   font-style: normal;
   color: $color-tangaroa;
   background-color: $color-default-white;
-  min-height: 320px;
   display: grid;
-  grid-template-rows: min-content max-content min-content;
+  margin: 0 auto;
+  min-width: 320px;
 }

@@ -1,0 +1,96 @@
+.cruises {
+  margin: 0 auto;
+  padding: 0;
+  width: auto;
+  text-align: center;
+}
+
+.cruises__info {
+  display: none;
+
+}
+
+.cruises__list {
+  margin: 0 auto;
+  width: 1160px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 30px;
+
+  @media (max-width: $vp-1024) {
+    grid-template-columns: 1fr 1fr;
+    width: 678px;
+  }
+
+  @media (max-width: $vp-768) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 320px;
+  }
+}
+
+.cruises__item {
+  position: relative;
+}
+
+.cruises__item-title {
+  position: absolute;
+  z-index: 1;
+  top: 315px;
+  left: 30px;
+  font-size: 18px;
+  line-height: 27px;
+  color: $alice-bBlue;
+
+  @media (max-width: $vp-1024) {
+    top: 265px;
+  }
+
+  @media (max-width: $vp-768) {
+    top: 304px;
+  }
+}
+
+.cruises__item:hover .cruises__info {
+  display: flex;
+  flex-direction: column;
+  background-color: $color-tangaroa;
+  position: absolute;
+  z-index: 1;
+  top: 0px;
+  width: 260px;
+}
+
+.cruises__info-list {
+  margin: 0;
+  padding: 0;
+}
+
+.cruises__info-title {
+  color: $color-alice-bBlue;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+  margin: 0;
+  padding: 0;
+
+}
+
+.cruises__info-name {
+  color: $color-alice-bBlue;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+.cruises__info-paragraph {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: $color-quartz;
+  margin: 0;
+  padding: 0;
+}
