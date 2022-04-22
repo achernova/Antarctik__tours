@@ -4,7 +4,7 @@
   margin-top: 120px;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  align-items: center;
+  //align-items: center;
   width: 1160px;
 
   @media (max-width: $vp-1024) {
@@ -17,13 +17,11 @@
     flex-direction: column;
     width: 290px;
   }
-
 }
 
 .intro__container {
   display: flex;
   flex-direction: column;
-
 }
 
 

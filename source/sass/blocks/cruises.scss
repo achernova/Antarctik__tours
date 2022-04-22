@@ -5,13 +5,9 @@
   text-align: center;
 }
 
-.cruises__info {
-  display: none;
-
-}
-
 .cruises__list {
   margin: 0 auto;
+  padding: 0;
   width: 1160px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -19,7 +15,7 @@
 
   @media (max-width: $vp-1024) {
     grid-template-columns: 1fr 1fr;
-    width: 678px;
+    width: 648px;
   }
 
   @media (max-width: $vp-768) {
@@ -32,6 +28,22 @@
 
 .cruises__item {
   position: relative;
+  margin: 0 auto;
+  width: 260px;
+
+  @media screen and (min-width: $vp-1024) {
+    &:hover .cruises__info {
+      display: flex;
+      flex-direction: column;
+      background-color: $color-tangaroa;
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      width: 260px;
+      text-align: left;
+      height: 386px;
+    }
+  }
 }
 
 .cruises__item-title {
@@ -41,7 +53,7 @@
   left: 30px;
   font-size: 18px;
   line-height: 27px;
-  color: $alice-bBlue;
+  color: $color-alice-blue;
 
   @media (max-width: $vp-1024) {
     top: 265px;
@@ -52,38 +64,46 @@
   }
 }
 
-.cruises__item:hover .cruises__info {
-  display: flex;
-  flex-direction: column;
-  background-color: $color-tangaroa;
-  position: absolute;
-  z-index: 1;
-  top: 0px;
-  width: 260px;
+.cruises__info {
+  display: none;
+
 }
 
 .cruises__info-list {
   margin: 0;
   padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-around;
+  margin-left: 25px;
+}
+
+.cruises__info-item {
+  margin-bottom: 10px;
 }
 
 .cruises__info-title {
-  color: $color-alice-bBlue;
+  color: $color-alice-blue;
   font-weight: 500;
   font-size: 18px;
   line-height: 27px;
   margin: 0;
   padding: 0;
-
+  margin-top: 25px;
+  margin-bottom: 15px;
+  margin-left: 25px;
 }
 
 .cruises__info-name {
-  color: $color-alice-bBlue;
+  color: $color-alice-blue;
   font-weight: 500;
   font-size: 14px;
   line-height: 20px;
   margin: 0;
   padding: 0;
+  text-align: left;
+
 }
 
 .cruises__info-paragraph {
@@ -93,4 +113,20 @@
   color: $color-quartz;
   margin: 0;
   padding: 0;
+  text-align: left;
+  margin-bottom: 5px;
+}
+
+.cruises__button {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 21px;
+  background-color: $color-alice-blue;
+  width: 210px;
+  padding-top: 14px;
+  padding-bottom: 15px;
+  padding-left: 47px;
+  align-self: center;
+  margin: auto;
+  cursor: pointer;
 }

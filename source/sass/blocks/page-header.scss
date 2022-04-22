@@ -1,17 +1,19 @@
 .page-header {
   background-color: $color-grey;
-  background-image: url('../img/Header-desktop.jpg');
+  background-image: url("../img/Header-desktop.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   margin: 0 auto;
   width: 100%;
+  padding: 0 40px;
 
   @media (min-resolution: 2dppx) {
     background-image: url("../img/Header-desktop@2x.jpg");
   }
 
   @media (max-width: $vp-1024) {
-    background-image: url('../img/Header-tablet.jpg');
+    background-image: url("../img/Header-tablet.jpg");
+    padding: 0 24px;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/Header-tablet@2x.jpg");
@@ -19,7 +21,8 @@
   }
 
   @media (max-width: $vp-768) {
-    background-image: url('../img/Header.jpg');
+    background-image: url("../img/Header.jpg");
+    padding: 0 16px;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/Header@2x.jpg");
@@ -50,7 +53,7 @@
   font-weight: 700;
   font-size: 54px;
   line-height: 66px;
-  color: $alice-bBlue;
+  color: $color-alice-blue;
   margin-bottom: 25px;
   padding-top: 263px;
 
@@ -69,7 +72,7 @@
 
 .page-header__paragraph {
   margin: 0;
-  color: $alice-bBlue;
+  color: $color-alice-blue;
   padding-bottom: 283px;
   font-weight: 400;
   font-size: 20px;
@@ -78,18 +81,17 @@
   @media (max-width: $vp-1024) {
     font-size: 18px;
     line-height: 22px;
-    padding-bottom: 280px
+    padding-bottom: 280px;
   }
 
   @media (max-width: $vp-768) {
     font-size: 16px;
     line-height: 22px;
-    padding-bottom: 185px
+    padding-bottom: 185px;
   }
 }
 
 .page-header__logo-icon-dsk {
-
   @media (max-width: $vp-768) {
     display: none;
   }
