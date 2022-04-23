@@ -6,7 +6,7 @@
   background-size: cover;
   text-align: center;
   margin-top: 120px;
-  padding-top: 120px;
+  padding-top: 110px;
   padding-bottom: 120px;
 
   @media (min-resolution: 2dppx) {
@@ -15,8 +15,9 @@
 
   @media (max-width: $vp-1024) {
     background-image: url("../img/advantages-tablet.jpg");
-    padding-top: 100px;
+    padding-top: 90px;
     padding-bottom: 100px;
+    margin-top: 94px;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/advantages-tablet@2x.jpg");
@@ -27,6 +28,7 @@
     background-image: url("../img/advantages-mobile.jpg");
     padding-top: 60px;
     padding-bottom: 65px;
+    margin-top: 64px;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/advantages-mobile@2x.jpg");
@@ -37,7 +39,7 @@
 .advantages__title {
   margin: 0 auto;
   padding: 0;
-  margin-bottom: 60px;
+  margin-bottom: 50px;
   font-weight: 600;
   font-size: 28px;
   line-height: 42px;
@@ -50,7 +52,8 @@
   @media (max-width: $vp-768) {
     font-size: 24px;
     line-height: 36px;
-    padding-bottom: 40px;
+    padding-bottom: 27px;
+    margin-bottom: 0;
   }
 }
 
@@ -76,19 +79,50 @@
 
 .advantages__item {
   width: 360px;
-  padding-top: 30px;
+  padding-top: 35px;
   padding-left: 30px;
-  padding-right: 42px;
+  padding-right: 30px;
+  padding-bottom: 12px;
   background-color: $color-default-white;
   text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 
   @media (max-width: $vp-1024) {
     width: 206px;
-    padding-left: 29px;
+    padding-left: 20px;
     padding-right: 16px;
+    padding-top: 24px;
   }
 
   @media (max-width: $vp-768) {
     width: 290px;
+    margin-bottom: 9px;
+  }
+}
+
+.advantages__item-title {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+  margin: 0;
+  margin-top: 21px;
+  width: 300px;
+
+  @media (max-width: $vp-1024) {
+    width: 200px;
+  }
+}
+
+
+.advantages__paragraph {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+
+  @media (max-width: $vp-1024) {
+    margin-top: 9px;
+    margin-bottom: 0;
   }
 }

@@ -6,12 +6,9 @@
   background-size: cover;
   text-align: center;
   margin-top: 120px;
-  padding-top: 120px;
-  padding-bottom: 120px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  padding-top: 50px;
+  padding-top: 45px;
   padding-bottom: 50px;
+
 
   @media (min-resolution: 2dppx) {
     background-image: url("../img/reservation-bck@2x.jpg");
@@ -21,6 +18,8 @@
     background-image: url("../img/reservation-bck-tab.jpg");
     display: flex;
     flex-direction: column;
+    margin-top: 100px;
+    padding-bottom: 99px;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/reservation-bck-tab@2x.jpg");
@@ -29,6 +28,9 @@
 
   @media (max-width: $vp-768) {
     background-image: url("../img/reservation-bck-mob.jpg");
+    margin-top: 64px;
+    padding-top: 11px;
+    padding-bottom: 71px;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/reservation-bck-mob@2x.jpg");
@@ -37,6 +39,24 @@
 }
 
 .reservation__container {
+  margin: 0 auto;
+  width: 1160px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  @media (max-width: $vp-1024) {
+    width: 678px;
+    display: flex;
+    flex-direction: column;
+  }
+
+
+  @media (max-width: $vp-768) {
+    width: 320px;
+  }
+
+}
+.reservation__description {
   width: 580px;
   margin: 0 auto;
   display: flex;
@@ -48,6 +68,7 @@
   @media (max-width: $vp-1024) {
     align-items: center;
     text-align: center;
+    padding-top: 45px;
   }
 
   @media (max-width: $vp-768) {
@@ -60,12 +81,15 @@
   font-size: 40px;
   line-height: 60px;
   margin: 0;
-  margin-left: 50px;
-  margin-bottom: 35px;
+  margin-left: 59px;
+  margin-top: 27px;
 
   @media (max-width: $vp-1024) {
     margin: 0;
-    margin-bottom: 25px;
+    margin-bottom: 0;
+    font-size: 34px;
+    line-height: 51px;
+    margin-top: 4px;
   }
 
   @media (max-width: $vp-768) {
@@ -73,6 +97,7 @@
     font-size: 24px;
     line-height: 31px;
     width: 194px;
+    margin-bottom: 12px;
   }
 
 }
@@ -81,17 +106,21 @@
   font-weight: 400;
   font-size: 18px;
   line-height: 27px;
-  margin-left: 50px;
+  margin-left: 59px;
+  margin-bottom: 33px;
+  width: 346px;
 
   @media (max-width: $vp-1024) {
     margin: 0;
-    margin-bottom: 25px;
+    margin-bottom: 52px;
     width: 352px;
   }
 
-
   @media (max-width: $vp-768) {
-    width: 290px;
+    font-size: 16px;
+    line-height: 22px;
+    width: 205px;
+    margin-bottom: 35px;
   }
 }
 
@@ -104,10 +133,28 @@
   flex-direction: column;
   align-items: center;
 
+  @media (max-width: $vp-1024) {
+    padding-top: 45px;
+  }
+
+  @media (max-width: $vp-768) {
+    width: 290px;
+    padding: 32px;
+  }
+}
+
+.reservation__feedback {
+  width: 636px;
+
+  @media (max-width: $vp-1024) {
+    margin: 0 auto;
+  }
+
   @media (max-width: $vp-768) {
     width: 290px;
   }
 }
+
 
 .reservation__feedback-paragraph {
   font-weight: 500;
@@ -115,6 +162,14 @@
   line-height: 27px;
   color: $color-alice-blue;
   text-align: left;
+  margin: 0;
+  margin-bottom: 26px;
+
+  @media (max-width: $vp-768) {
+    text-align: center;
+    line-height: 25px;
+    margin-bottom: 32px;
+  }
 }
 
 .reservation__form {
@@ -141,15 +196,21 @@
   }
 }
 
-.reservation__form-input {
+.reservation__form-input--name,
+.reservation__form-input--phone,
+.reservation__form-input--email {
   width: 303px;
+
+  @media (max-width: $vp-768) {
+    width: 230px;
+  }
+}
+.reservation__form-input {
   padding-top: 10px;
   padding-bottom: 10px;
   padding-left: 15px;
 
-  @media (max-width: $vp-768) {
-    width: 260px;
-  }
+
 }
 
 .reservation__form-paragraph--checkbox {
@@ -158,9 +219,20 @@
   justify-content: flex-start;
   align-items: center;
   position: relative;
+  margin-bottom: 30px;
+
+  @media (max-width: $vp-768) {
+    margin-bottom: 24px;
+  }
 }
 
-input[type="checkbox"] {
+.reservation__form-label--checkbox {
+  @media (max-width: $vp-768) {
+    margin-left: 35px;
+  }
+}
+
+.reservation__form-input--checkbox {
   width: 20px;
 
 }
@@ -175,10 +247,9 @@ input[type="checkbox"] {
   left: 0;
 
   @media (max-width: $vp-768) {
-    top: 5px;
-    left: 4px;
+    top: 2px;
+    left: 25px;
   }
-
 }
 
 .reservation__form-input--checkbox:checked + label::after {
@@ -199,11 +270,13 @@ input[type="checkbox"] {
   font-size: 14px;
   line-height: 21px;
   padding-top: 15px;
-  padding-bottom: 15px;
+  padding-bottom: 10px;
+  margin-top: 5px;
   cursor: pointer;
   border: none;
 
   @media (max-width: $vp-768) {
-    width: 260px;
+    width: 230px;
+    margin-top: 0;
   }
 }
