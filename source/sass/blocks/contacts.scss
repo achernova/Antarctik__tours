@@ -6,6 +6,10 @@
   width: 1160px;
   column-gap: 100px;
 
+  @media (max-width: 1160px) {
+    width: 1023px;
+  }
+
   @include vp-1023 {
     width: 678px;
     column-gap: 0;

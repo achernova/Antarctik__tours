@@ -4,8 +4,11 @@
   margin-top: 113px;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  //align-items: center;
   width: 1160px;
+
+  @media (max-width: 1160px) {
+    width: 1023px;
+  }
 
   @include vp-1023 {
     width: 678px;

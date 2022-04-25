@@ -1,6 +1,7 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
-import {getCruise} from './modules/getCruise';
+import {getCruise} from './modules/cruises.js';
+import {getNavigation} from './modules/main-nav.js';
 
 // ---------------------------------
 
@@ -10,6 +11,8 @@ window.addEventListener('DOMContentLoaded', () => {
   // ---------------------------------
 
   iosVhFix();
+
+  getNavigation();
   getCruise();
   // Modules
   // ---------------------------------
@@ -18,6 +21,7 @@ window.addEventListener('DOMContentLoaded', () => {
   // в load следует добавить скрипты, не участвующие в работе первого экрана
   window.addEventListener('load', () => {
     initModals();
+
 
   });
 });

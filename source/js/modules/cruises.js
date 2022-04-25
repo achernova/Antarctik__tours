@@ -1,17 +1,15 @@
-const cruise = document.getElementById('#cruis');
-const cruiseCard = document.getElementById('#cruise-card');
-
-console.log(cruise);
+const cards = document.querySelectorAll('[data-element="card"]');
 
 const getCruise = () => {
-  for (let i = 0; i < cruise.length; i++) {
-    cruise[i].addEventListener('click', function (evt) {
-      evt.preventDefault();
-      cruiseCard.classList.add('is-active');
+  for (let i = 0; i < cards.length; i++) {
+    cards[i].addEventListener('click', function (evt) {
+      for (let r = 0; r < cards.length; r++) {
+        cards[r].classList.remove('is-active');
+      }
+      const card = evt.target.closest('[data-element="card"]');
+      card.classList.add('is-active');
     });
   }
 };
-
-getCruise();
 
 export {getCruise};
