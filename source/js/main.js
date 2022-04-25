@@ -1,5 +1,6 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
+import {getCruise} from './modules/getCruise';
 
 // ---------------------------------
 
@@ -9,7 +10,7 @@ window.addEventListener('DOMContentLoaded', () => {
   // ---------------------------------
 
   iosVhFix();
-
+  getCruise();
   // Modules
   // ---------------------------------
 
