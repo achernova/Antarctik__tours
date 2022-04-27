@@ -83,7 +83,7 @@
   }
 }
 
-.reservation__title {
+.reservation__description h2 {
   font-weight: 700;
   font-size: 40px;
   line-height: 60px;
@@ -108,7 +108,7 @@
   }
 }
 
-.reservation__paragraph {
+.reservation__description p {
   font-weight: 400;
   font-size: 18px;
   line-height: 27px;
@@ -166,7 +166,7 @@
 }
 
 
-.reservation__feedback-paragraph {
+.reservation__content p {
   font-weight: 500;
   font-size: 18px;
   line-height: 27px;
@@ -188,7 +188,7 @@
   align-items: center;
 }
 
-.reservation__form-paragraph {
+.reservation__form-container {
   margin: 0;
   padding: 0;
   margin-bottom: 20px;
@@ -206,9 +206,9 @@
   }
 }
 
-.reservation__form-input--name,
-.reservation__form-input--phone,
-.reservation__form-input--email {
+.reservation__form-container--name input,
+.reservation__form-container--phone input,
+.reservation__form-container--email input {
   width: 303px;
 
   @include vp-767 {
@@ -220,13 +220,13 @@
   border: solid 2px $color-torch-red;
 }
 
-.reservation__form-input {
+.reservation__form input {
   padding-top: 10px;
   padding-bottom: 10px;
   padding-left: 15px;
 }
 
-.reservation__form-paragraph--checkbox {
+.reservation__form-container--checkbox {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -245,11 +245,11 @@
   }
 }
 
-.reservation__form-input--checkbox {
+.reservation__form-container--checkbox input {
   width: 20px;
 }
 
-.reservation__form-input--checkbox + label::before {
+.reservation__form-container--checkbox input + label::before {
   position: absolute;
   content: "";
   width: 18px;
@@ -264,7 +264,7 @@
   }
 }
 
-.reservation__form-input--checkbox:checked + label::after {
+.reservation__form-container--checkbox input:checked + label::after {
   position: absolute;
   content: "";
   width: 10px;

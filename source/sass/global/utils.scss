@@ -4,7 +4,6 @@
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  /* stylelint-disable-next-line */
   min-height: calc(100 * var(--vh, 1vh));
 
   min-width: 320px;
@@ -21,10 +20,8 @@
 
 .rouble {
   font-family: $ff-rouble;
-  /* stylelint-disable */
   text-transform: lowercase !important;
   font-weight: 400 !important;
-  /* stylelint-enable */
 }
 
 .visually-hidden {
@@ -64,6 +61,5 @@
 }
 
 .no-transition {
-  /* stylelint-disable-next-line */
   transition: none !important;
 }

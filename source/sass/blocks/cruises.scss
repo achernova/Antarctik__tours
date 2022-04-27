@@ -5,7 +5,7 @@
   text-align: center;
 }
 
-.cruises__title {
+.cruises h2 {
   margin: 0 auto;
   margin-top: 110px;
   margin-bottom: 47px;
@@ -102,7 +102,7 @@
   }
 }
 
-.cruises__item-title {
+.cruises__list h3 {
   position: absolute;
   z-index: 1;
   top: 315px;
@@ -138,7 +138,7 @@
   margin-bottom: 10px;
 }
 
-.cruises__info-title {
+.cruises__info h4 {
   color: $color-alice-blue;
   font-weight: 500;
   font-size: 18px;
@@ -150,7 +150,7 @@
   margin-left: 25px;
 }
 
-.cruises__info-name {
+.cruises__info-item h5 {
   color: $color-alice-blue;
   font-weight: 500;
   font-size: 14px;
@@ -160,7 +160,7 @@
   text-align: left;
 }
 
-.cruises__info-paragraph {
+.cruises__info-item p {
   font-weight: 400;
   font-size: 14px;
   line-height: 20px;
