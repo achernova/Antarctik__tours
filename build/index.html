@@ -11,7 +11,7 @@
     <link rel="preload" href="fonts/montserrat-semibold.woff2" as="font" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.min.css">
   </head>
-  <body class="page-body">
+  <body class="page-body" id="body">
     <div class="wrapper">
       <header class="page-header">
         <div class="container">
@@ -28,7 +28,7 @@
               <button class="main-nav__toggle" type="button" id="main-nav-toggle">
                 <span class="visually-hidden">Открыть меню</span>
               </button>
-              <div class="main-nav__wrapper">
+              <div class="main-nav__wrapper" id="nav-wrapper">
                 <ul class="main-nav__list">
                   <li class="main-nav__item">
                     <a class="main-nav__logo" href="#">
@@ -47,29 +47,29 @@
                     <a href="#cruises" class="main-nav__link">Ближайшие круизы</a>
                   </li>
                   <li class="main-nav__item">
-                    <a href="#" class="main-nav__link">Контакты</a>
+                    <a href="#contacts" class="main-nav__link">Контакты</a>
                   </li>
                 </ul>
               </div>
             </nav>
           </div>
           <div class="page-header__intro">
-            <h2>Круизы в Антарктику</h2>
+            <h2>Круизы в&nbsp;Антарктику</h2>
             <p>Волшебный мир айсбергов и пингвинов</p>
           </div>
         </div>
       </header>
       <main class="page-main">
-        <h1 class="visually-hidden">Круизы в&nbsp;Антарктику</h1>
+        <h1 class="visually-hidden">Круизы в Антарктику</h1>
         <div class="container">
           <section class="intro">
             <div class="intro__container">
               <h2>Путешествие на край Земли</h2>
-                <p>Это волшебное путешествие поможет вам познакомиться поближе с удивительным миром Антарктики. Наш круизный лайнер отвезет вас на край Земли, где вы сможете увидеть: ледяные айсберги, несколько видов пингвинов, китов, морских котиков и многое другое.</p>
+                <p>Это волшебное путешествие поможет вам познакомиться поближе с&nbsp;удивительным миром Антарктики. Наш круизный лайнер отвезет вас на&nbsp;край Земли, где вы сможете увидеть: ледяные айсберги, несколько видов пингвинов, китов, морских котиков и многое другое.</p>
             </div>
             <picture class="intro__img">
               <!-- 290 580 -->
-              <source type="image/webp" media="(max-width: 768px)" srcset="img/intro-penguin.webp 1x, img/intro-penguin@2x.webp 2x">
+              <source type="image/webp" media="(max-width: 767px)" srcset="img/intro-penguin.webp 1x, img/intro-penguin@2x.webp 2x">
               <!-- 324 648 -->
               <source type="image/webp" media="(max-width: 1024px)" srcset="img/intro-penguin-tablet.webp 1x, img/intro-penguin-tablet@2x.webp 2x">
               <!-- 560 1120 -->
@@ -81,26 +81,26 @@
           <section class="advantages" id="advatages">
             <h2>Преимущества</h2>
             <ul class="advantages__list">
-              <li class="advantages__item">
+              <li class="advantages__item advantages__item--ship">
                 <svg class="advantages__icon" width="21" height="26">
                   <use xlink:href="img/sprite.svg#icon-advantage1"></use>
                 </svg>
                 <h3>Небольшой круизный лайнер</h3>
-                <p>Круизный лайнер, рассчитанный всего лишь на 300 гостей, поможет избежать шума и очередей и даст возможность насладиться видами и природой.</p>
+                <p>Круизный лайнер, рассчитанный всего лишь на 300 гостей, поможет избежать шума и очередей и даст возможность насладиться видами и&nbsp;природой.</p>
               </li>
-              <li class="advantages__item">
+              <li class="advantages__item advantages__item--dish">
                 <svg class="advantages__icon" width="33" height="19">
                   <use xlink:href="img/sprite.svg#icon-advantage2"></use>
                 </svg>
-                <h3>Система все включено</h3>
-                <p>Все наши круизы работают по системе “Все Включено”. Великолепные блюда и безлимитный бар доступны для вас 24 часа.</p>
+                <h3>Система все&nbsp;включено</h3>
+                <p>Все наши круизы работают по&nbsp;системе “Все Включено”. Великолепные блюда и&nbsp;безлимитный бар доступны для&nbsp;вас 24&nbsp;часа.</p>
               </li>
-              <li class="advantages__item">
+              <li class="advantages__item advantages__item--tour">
                 <svg class="advantages__icon" width="38" height="19">
                   <use xlink:href="img/sprite.svg#icon-advantage3"></use>
                 </svg>
                 <h3>Экскурсионные туры на Zodiac</h3>
-                <p>Экскурсионные туры к берегам Антарктиды совершаются на оборудованных лодках типа Zodiac  в сопровождении опытных экскурсоводов.</p>
+                <p>Экскурсионные туры к&nbsp;берегам Антарктиды совершаются на&nbsp;оборудованных лодках типа Zodiac  в&nbsp;сопровождении опытных&nbsp;экскурсоводов.</p>
               </li>
             </ul>
           </section>
@@ -110,7 +110,7 @@
               <li class="cruises__item" data-element="card">
                 <picture class="cruises__img">
                   <!-- 270 540 -->
-                  <source type="image/webp" media="(max-width: 768px)" srcset="img/Astoria-mob.webp 1x, img/Astoria-mob@2x.webp 2x">
+                  <source type="image/webp" media="(max-width: 767px)" srcset="img/Astoria-mob.webp 1x, img/Astoria-mob@2x.webp 2x">
                   <!-- 309 618 -->
                   <source type="image/webp" media="(max-width: 1023px)" srcset="img/Astoria-tab.webp 1x, img/Astoria-tab@2x.webp 2x">
                   <!-- 260 520 -->
@@ -145,7 +145,7 @@
               <li class="cruises__item" data-element="card">
                 <picture class="cruises__img">
                   <!-- 270 540 -->
-                  <source type="image/webp" media="(max-width: 768px)" srcset="img/Minion-mob.webp 1x, img/Minion-mob@2x.webp 2x">
+                  <source type="image/webp" media="(max-width: 767px)" srcset="img/Minion-mob.webp 1x, img/Minion-mob@2x.webp 2x">
                   <!-- 309 618 -->
                   <source type="image/webp" media="(max-width: 1023px)" srcset="img/Minion-tab.webp 1x, img/Minion-tab@2x.webp 2x">
                   <!-- 260 520 -->
@@ -154,7 +154,7 @@
                   <img src="img/Minion-desk.jpg" width="260" height="386" srcset="img/Minion-desk@2x.jpg 2x" alt="Элайн">
                 </picture>
                 <h3>Круиз “Элайн”</h3>
-                <div class="cruises__info">
+                <div class="cruises__info cruises__info--elain">
                   <h4>Круиз “Элайн”</h4>
                   <ul class="cruises__info-list">
                     <li class="cruises__info-item">
@@ -180,7 +180,7 @@
               <li class="cruises__item" data-element="card">
                 <picture class="cruises__img">
                   <!-- 270 540 -->
-                  <source type="image/webp" media="(max-width: 768px)" srcset="img/Atlantis-mob.webp 1x, img/Atlantis-mob@2x.webp 2x">
+                  <source type="image/webp" media="(max-width: 767px)" srcset="img/Atlantis-mob.webp 1x, img/Atlantis-mob@2x.webp 2x">
                   <!-- 309 618 -->
                   <source type="image/webp" media="(max-width: 1023px)" srcset="img/Atlantis-tab.webp 1x, img/Atlantis-tab@2x.webp 2x">
                   <!-- 260 520 -->
@@ -215,7 +215,7 @@
               <li class="cruises__item" data-element="card">
                 <picture class="cruises__img">
                   <!-- 270 540 -->
-                  <source type="image/webp" media="(max-width: 768px)" srcset="img/Odissey-mob.webp 1x, img/Odissey-mob@2x.webp 2x">
+                  <source type="image/webp" media="(max-width: 767px)" srcset="img/Odissey-mob.webp 1x, img/Odissey-mob@2x.webp 2x">
                   <!-- 309 618 -->
                   <source type="image/webp" media="(max-width: 1023px)" srcset="img/Odissey-tab.webp 1x, img/Odissey-tab@2x.webp 2x">
                   <!-- 260 520 -->
@@ -250,7 +250,7 @@
               <li class="cruises__item" data-element="card">
                 <picture class="cruises__img">
                   <!-- 270 540 -->
-                  <source type="image/webp" media="(max-width: 768px)" srcset="img/Olimpia-mob.webp 1x, img/Olimpia-mob@2x.webp 2x">
+                  <source type="image/webp" media="(max-width: 767px)" srcset="img/Olimpia-mob.webp 1x, img/Olimpia-mob@2x.webp 2x">
                   <!-- 309 618 -->
                   <source type="image/webp" media="(max-width: 1023px)" srcset="img/Olimpia-tab.webp 1x, img/Olimpia-tab@2x.webp 2x">
                   <!-- 260 520 -->
@@ -285,7 +285,7 @@
               <li class="cruises__item" data-element="card">
                 <picture class="cruises__img">
                   <!-- 270 540 -->
-                  <source type="image/webp" media="(max-width: 768px)" srcset="img/Avrora-mob.webp 1x, img/Avrora-mob@2x.webp 2x">
+                  <source type="image/webp" media="(max-width: 767px)" srcset="img/Avrora-mob.webp 1x, img/Avrora-mob@2x.webp 2x">
                   <!-- 309 618 -->
                   <source type="image/webp" media="(max-width: 1023px)" srcset="img/Avrora-tab.webp 1x, img/Avrora-tab@2x.webp 2x">
                   <!-- 260 520 -->
@@ -320,7 +320,7 @@
               <li class="cruises__item" data-element="card">
                 <picture class="cruises__img">
                   <!-- 270 540 -->
-                  <source type="image/webp" media="(max-width: 768px)" srcset="img/Leonor-mob.webp 1x, img/Leonor-mob@2x.webp 2x">
+                  <source type="image/webp" media="(max-width: 767px)" srcset="img/Leonor-mob.webp 1x, img/Leonor-mob@2x.webp 2x">
                   <!-- 309 618 -->
                   <source type="image/webp" media="(max-width: 1023px)" srcset="img/Leonor-tab.webp 1x, img/Leonor-tab@2x.webp 2x">
                   <!-- 260 520 -->
@@ -355,7 +355,7 @@
               <li class="cruises__item" data-element="card">
                 <picture class="cruises__img">
                   <!-- 270 540 -->
-                  <source type="image/webp" media="(max-width: 768px)" srcset="img/Minion-mob.webp 1x, img/Minion-mob@2x.webp 2x">
+                  <source type="image/webp" media="(max-width: 767px)" srcset="img/Minion-mob.webp 1x, img/Minion-mob@2x.webp 2x">
                   <!-- 309 618 -->
                   <source type="image/webp" media="(max-width: 1023px)" srcset="img/Minion-tab.webp 1x, img/Minion-tab@2x.webp 2x">
                   <!-- 260 520 -->
@@ -393,11 +393,11 @@
             <div class="reservation__container">
               <div class="reservation__description">
                 <h2>Раннее бронирование</h2>
-                <p>Забронируйте тур за 3-6 месяцев до&nbsp;даты выезда и сэкономьте до 50%</p>
+                <p>Забронируйте тур за 3-6&nbsp;месяцев до&nbsp;даты выезда и&nbsp;сэкономьте до 50%</p>
               </div>
               <div class="reservation__feedback">
                 <div class="reservation__content">
-                  <p>Оставьте заявку и мы свяжемся с вами в ближайшее время</p>
+                  <p>Оставьте заявку и&nbsp;мы&nbsp;свяжемся с&nbsp;вами в ближайшее время</p>
                 <form class="reservation__form" action="#" method="POST">
                   <div class="reservation__form-container reservation__form-container--name">
                     <label class="reservation__form-label reservation__form-label--name visually-hidden" for="name">Имя</label>
@@ -405,17 +405,17 @@
                   </div>
                   <div class="reservation__form-container reservation__form-container--phone">
                     <label class="reservation__form-label reservation__form-label--phone visually-hidden" for="phone">Телефон:</label>
-                    <input type="tel" name="phone" id="phone" pattern="[\+]\d{1}\s[\(]\d{3}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}" minlength="18" maxlength="18" placeholder="Телефон">
+                    <input type="tel" name="phone" id="phone" minlength="7" maxlength="18" placeholder="Телефон" required>
                   </div>
                   <div class="reservation__form-container reservation__form-container--email">
                     <label class="reservation__form-label reservation__form-label--email visually-hidden" for="email">email:</label>
-                    <input type="email" name="email" id="email" placeholder="E-mail">
+                    <input type="email" name="email" id="email" placeholder="E-mail" required>
                   </div>
                   <div class="reservation__form-container reservation__form-container--checkbox">
                     <input type="checkbox" name="checkbox" id="checkbox" checked>
                     <label class="reservation__form-label reservation__form-label--checkbox" for="checkbox">Я согласен на обработку моих персональных данных</label>
                   </div>
-                  <button class="reservation__button" type="button">Оставить заявку</button>
+                  <button class="reservation__button" type="submit">Оставить заявку</button>
                 </form>
                 </div>
               </div>

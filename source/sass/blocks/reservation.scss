@@ -1,13 +1,14 @@
 .reservation {
   width: 100%;
-  background-color: $color-grey;
+  background-color: $color-tangaroa;
   background-image: url("../img/reservation-bck.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center center;
   text-align: center;
   margin-top: 120px;
-  padding-top: 49px;
-  padding-bottom: 50px;
+  padding-top: 47px;
+  padding-bottom: 54px;
 
   @media (min-resolution: 2dppx) {
     background-image: url("../img/reservation-bck@2x.jpg");
@@ -18,7 +19,7 @@
     display: flex;
     flex-direction: column;
     margin-top: 100px;
-    padding-bottom: 99px;
+    padding-bottom: 102px;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/reservation-bck-tab@2x.jpg");
@@ -29,7 +30,7 @@
     background-image: url("../img/reservation-bck-mob.jpg");
     margin-top: 64px;
     padding-top: 11px;
-    padding-bottom: 71px;
+    padding-bottom: 65px;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/reservation-bck-mob@2x.jpg");
@@ -75,11 +76,12 @@
   @include vp-1023 {
     align-items: center;
     text-align: center;
-    padding-top: 45px;
+    padding-top: 35px;
   }
 
   @include vp-767 {
     width: 320px;
+    padding-top: 44px;
   }
 }
 
@@ -89,14 +91,15 @@
   line-height: 60px;
   margin: 0;
   margin-left: 59px;
-  margin-top: 27px;
+  margin-top: 30px;
 
   @include vp-1023 {
     margin: 0;
     margin-bottom: 0;
     font-size: 34px;
     line-height: 51px;
-    margin-top: 4px;
+    margin-top: 6px;
+    margin-bottom: 5px;
   }
 
   @include vp-767 {
@@ -114,18 +117,19 @@
   line-height: 27px;
   margin-left: 59px;
   margin-bottom: 33px;
+  margin-top: 8px;
   width: 346px;
 
   @include vp-1023 {
     margin: 0;
-    margin-bottom: 52px;
+    margin-bottom: 54px;
     width: 352px;
   }
 
   @include vp-767 {
     font-size: 16px;
     line-height: 22px;
-    width: 205px;
+    width: 277px;
     margin-bottom: 35px;
   }
 }
@@ -134,13 +138,15 @@
   width: 403px;
   margin: 0 auto;
   background-color: $color-tangaroa;
-  padding: 50px 50px;
+  padding: 45px 45px;
   display: flex;
   flex-direction: column;
   align-items: center;
 
   @include vp-1023 {
     padding-top: 45px;
+    padding-bottom: 52px;
+
   }
 
   @include vp-767 {
@@ -172,12 +178,18 @@
   color: $color-alice-blue;
   text-align: left;
   margin: 0;
-  margin-bottom: 26px;
+  margin-bottom: 30px;
+
+  @include vp-1023 {
+    margin-left: 5px;
+    margin-bottom: 26px;
+  }
 
   @include vp-767 {
     text-align: center;
     line-height: 25px;
     margin-bottom: 32px;
+    margin-left: 0;
   }
 }
 
@@ -215,10 +227,6 @@
   }
 }
 
-.reservation__form-container input:invalid {
-  border: solid 2px $color-torch-red;
-}
-
 .reservation__form-container input {
   padding-top: 10px;
   padding-bottom: 10px;
@@ -231,21 +239,30 @@
   justify-content: flex-start;
   align-items: center;
   position: relative;
-  margin-bottom: 30px;
+  margin-bottom: 27px;
 
   @include vp-1023 {
     width: 303px;
     padding-left: 21px;
-    margin-bottom: 30px;
+    margin-bottom: 27px;
   }
 
   @include vp-767 {
     margin-bottom: 24px;
+    padding-left: 29px;
   }
 }
 
 .reservation__form-label--checkbox {
+  padding-left: 18px;
+
+  @include vp-1023 {
+    padding-left: 2px;
+    padding-top: 3px;
+  }
+
   @include vp-767 {
+    padding-left: 0;
     margin-left: 35px;
   }
 }
@@ -262,10 +279,11 @@
   height: 18px;
   background-color: $color-alice-blue;
   top: 0;
-  left: 0;
+  left: -3px;
 
   @include vp-1023 {
-    left: 2px;
+    left: 0;
+    top: 2px;
   }
 
   @include vp-767 {
@@ -280,9 +298,9 @@
   width: 10px;
   height: 10px;
   background-image: url("../img/svg/tick.svg");
-  background-repeat: none;
+  background-repeat: no-repeat;
   top: 5px;
-  left: 5px;
+  left: 0;
 
   @include vp-1023 {
     top: 4px;
@@ -307,8 +325,13 @@
   cursor: pointer;
   border: none;
 
+  @include vp-1023 {
+    padding-top: 12px;
+  }
+
   @include vp-767 {
     width: 230px;
     margin-top: 0;
+    margin-bottom: 6px;
   }
 }
