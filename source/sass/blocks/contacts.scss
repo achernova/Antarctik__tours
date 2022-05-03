@@ -20,8 +20,15 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 320px;
+    width: 100%;
     margin-top: 11px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  @include vp-374 {
+    width: 320px;
+    padding: 0;
   }
 }
 
@@ -36,6 +43,10 @@
 
   @include vp-767 {
     order: 2;
+    width: 100%;
+  }
+
+  @include vp-374 {
     width: 290px;
   }
 }
@@ -73,8 +84,13 @@
 
   @include vp-767 {
     margin-top: 47px;
+    text-align: center;
+    width: 100%;
+  }
+
+  @include vp-374 {
     text-align: left;
-    width: 280px;
+    width: 286px;
   }
 }
 

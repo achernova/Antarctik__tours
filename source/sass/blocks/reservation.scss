@@ -48,7 +48,6 @@
     width: 1023px;
   }
 
-
   @include vp-1023 {
     width: 678px;
     display: flex;
@@ -56,7 +55,14 @@
   }
 
   @include vp-767 {
-    width: 320px;
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  @include vp-374 {
+    width: 290px;
+    padding: 0;
   }
 }
 
@@ -70,18 +76,23 @@
   text-align: left;
 
   @media (max-width: 1160px) {
-    width: 517px;
+    width: 480px;
   }
 
   @include vp-1023 {
     align-items: center;
     text-align: center;
     padding-top: 35px;
+    width: 517px;
   }
 
   @include vp-767 {
-    width: 320px;
+    width: 100%;
     padding-top: 44px;
+  }
+
+  @include vp-374 {
+    width: 290px;
   }
 }
 
@@ -106,8 +117,12 @@
     font-weight: 700;
     font-size: 24px;
     line-height: 31px;
-    width: 194px;
+    width: 100%;
     margin-bottom: 12px;
+  }
+
+  @include vp-374 {
+    width: 194px;
   }
 }
 
@@ -129,29 +144,14 @@
   @include vp-767 {
     font-size: 16px;
     line-height: 22px;
-    width: 277px;
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
     margin-bottom: 35px;
   }
-}
 
-.reservation__content {
-  width: 403px;
-  margin: 0 auto;
-  background-color: $color-tangaroa;
-  padding: 45px 45px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  @include vp-1023 {
-    padding-top: 45px;
-    padding-bottom: 52px;
-
-  }
-
-  @include vp-767 {
+  @include vp-374 {
     width: 290px;
-    padding: 32px;
   }
 }
 
@@ -167,6 +167,34 @@
   }
 
   @include vp-767 {
+    width: 100%;
+  }
+
+  @include vp-374 {
+    width: 290px;
+  }
+}
+
+.reservation__content {
+  width: 403px;
+  margin: 0 auto;
+  background-color: $color-tangaroa;
+  padding: 45px 45px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include vp-1023 {
+    padding-top: 45px;
+    padding-bottom: 52px;
+  }
+
+  @include vp-767 {
+    width: 100%;
+    padding: 32px;
+  }
+
+  @include vp-374 {
     width: 290px;
   }
 }
@@ -179,16 +207,18 @@
   text-align: left;
   margin: 0;
   margin-bottom: 30px;
+  padding-left: 5px;
 
   @include vp-1023 {
     margin-left: 5px;
     margin-bottom: 26px;
+    padding-left: 0;
   }
 
   @include vp-767 {
     text-align: center;
     line-height: 25px;
-    margin-bottom: 32px;
+    margin-bottom: 31px;
     margin-left: 0;
   }
 }
@@ -197,12 +227,31 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @include vp-767 {
+    width: 100%;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  @include vp-374 {
+    padding: 0;
+    width: 280px;
+  }
 }
 
 .reservation__form-container {
   margin: 0;
   padding: 0;
   margin-bottom: 20px;
+
+  @include vp-767 {
+    width: 100%;
+  }
+
+  @include vp-374 {
+    padding: 0;
+  }
 }
 
 .reservation__form-label {
@@ -223,6 +272,10 @@
   width: 303px;
 
   @include vp-767 {
+    width: 100%;
+  }
+
+  @include vp-374 {
     width: 230px;
   }
 }
@@ -250,6 +303,11 @@
   @include vp-767 {
     margin-bottom: 24px;
     padding-left: 29px;
+    width: 100%;
+  }
+
+  @include vp-374 {
+    width: 303px;
   }
 }
 
@@ -263,7 +321,13 @@
 
   @include vp-767 {
     padding-left: 0;
-    margin-left: 35px;
+    margin-left: 34px;
+    width: 400px;
+  }
+
+  @include vp-374 {
+    margin-left: 64px;
+    width: 160px;
   }
 }
 

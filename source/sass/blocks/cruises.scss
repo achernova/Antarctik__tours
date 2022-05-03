@@ -37,7 +37,9 @@
   grid-column-gap: 10px;
 
   @media (max-width: 1160px) {
-    width: 1023px;
+    grid-template-columns: 1fr 1fr;
+    width: 648px;
+    grid-column-gap: 24px;
   }
 
   @include vp-1023 {
@@ -174,7 +176,6 @@
   }
 }
 
-
 .cruises__info--elain .cruises__info-item {
   margin-bottom: 8px;
 }
@@ -210,8 +211,6 @@
 }
 .cruises__info--elain .cruises__button {
   margin-top: 10px;
-
-
 }
 
 .cruises__item {
@@ -228,6 +227,10 @@
     width: 270px;
   }
 
+  &:focus {
+    outline: 2px solid $color-tangaroa;
+  }
+
   @media screen and (min-width: $vp-1024) {
     &:hover .cruises__info {
       display: flex;
@@ -241,4 +244,8 @@
       height: 386px;
     }
   }
+}
+
+.cruises__info:focus {
+  outline: 2px solid $color-tangaroa;
 }
