@@ -28,26 +28,27 @@
               <button class="main-nav__toggle" type="button" id="main-nav-toggle">
                 <span class="visually-hidden">Открыть меню</span>
               </button>
-              <div class="main-nav__wrapper" id="nav-wrapper">
+              <div class="main-nav__overlay" id="nav-wrapper"></div>
+              <div class="main-nav__wrapper">
                 <ul class="main-nav__list">
-                  <li class="main-nav__item">
-                    <a class="main-nav__logo" href="#">
+                  <li class="main-nav__item main-nav__item--logo" >
+                    <a class="main-nav__logo" href="#" data-element="nav-link">
                       <svg class="main-nav__logo-icon" width="42" height="22">
                         <use xlink:href="img/sprite.svg#icon-nav"></use>
                       </svg>
                     </a>
                   </li>
                   <li class="main-nav__item">
-                    <a href="#advatages" class="main-nav__link">Преимущества</a>
+                    <a href="#advatages" class="main-nav__link" data-element="nav-link">Преимущества</a>
                   </li>
                   <li class="main-nav__item">
-                    <a href="#" class="main-nav__link">Направления</a>
+                    <a href="#intro" class="main-nav__link" data-element="nav-link">Направления</a>
                   </li>
                   <li class="main-nav__item">
-                    <a href="#cruises" class="main-nav__link">Ближайшие круизы</a>
+                    <a href="#cruises" class="main-nav__link" data-element="nav-link">Ближайшие круизы</a>
                   </li>
                   <li class="main-nav__item">
-                    <a href="#contacts" class="main-nav__link">Контакты</a>
+                    <a href="#contacts" class="main-nav__link" data-element="nav-link">Контакты</a>
                   </li>
                 </ul>
               </div>
@@ -62,7 +63,7 @@
       <main class="page-main">
         <h1 class="visually-hidden">Круизы в Антарктику</h1>
         <div class="container">
-          <section class="intro">
+          <section class="intro" id="intro">
             <div class="intro__container">
               <h2>Путешествие на край Земли</h2>
                 <p>Это волшебное путешествие поможет вам познакомиться поближе с&nbsp;удивительным миром Антарктики. Наш круизный лайнер отвезет вас на&nbsp;край Земли, где вы сможете увидеть: ледяные айсберги, несколько видов пингвинов, китов, морских котиков и многое другое.</p>

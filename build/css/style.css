@@ -889,6 +889,21 @@ ul {
   border: none;
 }
 
+.main-nav__overlay {
+  position: fixed;
+  inset: 0px;
+  z-index: 1;
+  background-color: #808080;
+  opacity: 0;
+  -webkit-transition: opacity 0.6s cubic-bezier(0.24, 0.81, 0.2, 0.96) 0s, visibility 0.6s ease 0s;
+  -o-transition: opacity 0.6s cubic-bezier(0.24, 0.81, 0.2, 0.96) 0s, visibility 0.6s ease 0s;
+  transition: opacity 0.6s cubic-bezier(0.24, 0.81, 0.2, 0.96) 0s, visibility 0.6s ease 0s;
+}
+
+.is-invalid .main-nav__overlay {
+  visibility: hidden;
+}
+
 .is-invalid .main-nav__toggle::before {
   content: "";
   position: absolute;
@@ -905,16 +920,16 @@ ul {
   display: none;
 }
 
+.is-open .main-nav__overlay {
+  visibility: visible;
+  opacity: 0.8;
+}
+
 .is-open {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-}
-
-.is-open .main-nav__wrapper {
-  height: 577px;
-  background-color: rgba(128, 128, 128, 0.5);
 }
 
 .is-open .main-nav__logo {
@@ -925,6 +940,7 @@ ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  height: 100vh;
 }
 
 .is-open .main-nav__toggle {
@@ -937,8 +953,8 @@ ul {
   content: "";
   position: absolute;
   top: 10px;
-  left: 25px;
-  width: 30px;
+  left: 44px;
+  width: 20px;
   height: 2px;
   background-color: #808080;
   z-index: 2;
@@ -2070,25 +2086,32 @@ ul {
   }
 
   .main-nav__list {
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
     background-color: #ffffff;
     width: 286px;
     padding: 0;
     margin: 0;
-    padding-bottom: 284px;
+    padding-top: 20px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
     position: absolute;
-    top: -26px;
+    top: 0;
     right: 0;
     z-index: 1;
-    padding-top: 50px;
   }
 
   .main-nav__item {
-    margin-bottom: 29px;
-    margin-left: 20px;
+    margin-bottom: 26px;
+    margin-left: 26px;
+  }
+
+  .main-nav__item--logo {
+    margin-left: 15px;
+    margin-bottom: 34px;
   }
 
   .main-nav__link {
@@ -2113,7 +2136,9 @@ ul {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-    width: 290px;
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
     margin-top: 0;
   }
 
@@ -2123,7 +2148,7 @@ ul {
   }
 
   .intro__container p {
-    width: 290px;
+    width: 100%;
   }
 
   .intro__img {
@@ -2422,6 +2447,16 @@ ul {
 
   .reservation {
     background-image: url("../img/reservation-bck-mob@2x.jpg");
+  }
+}
+
+@media (max-width: 374px) {
+  .intro {
+    width: 290px;
+  }
+
+  .intro__container p {
+    width: 290px;
   }
 }
 

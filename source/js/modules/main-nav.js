@@ -2,6 +2,7 @@ const navMain = document.getElementById('main-nav');
 const navToggle = document.getElementById('main-nav-toggle');
 const navWrapper = document.getElementById('nav-wrapper');
 const pageBody = document.getElementById('body');
+const navLink = document.querySelectorAll('[data-element="nav-link"]');
 
 const getNavigation = () => {
   navMain.classList.remove('is-active');
@@ -24,6 +25,14 @@ const getNavigation = () => {
     navMain.classList.remove('is-open');
     pageBody.classList.remove('scroll-hidden');
   });
+
+  for (let i = 0; i < navLink.length; i++) {
+    navLink[i].addEventListener('click', function () {
+      navMain.classList.add('is-invalid');
+      navMain.classList.remove('is-open');
+      pageBody.classList.remove('scroll-hidden');
+    });
+  }
 };
 
 export {getNavigation};
