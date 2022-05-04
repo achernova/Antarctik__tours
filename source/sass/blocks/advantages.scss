@@ -1,7 +1,7 @@
 .advantages {
   width: 100%;
   background-color: $color-tangaroa;
-  background-image: url("../img/advantages.jpg");
+  background-image: url("../img/advantages.webp");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -11,22 +11,22 @@
   padding-bottom: 120px;
 
   @media (min-resolution: 2dppx) {
-    background-image: url("../img/advantages@2x.jpg");
+    background-image: url("../img/advantages@2x.webp");
   }
 
   @include vp-1023 {
-    background-image: url("../img/advantages-tablet.jpg");
+    background-image: url("../img/advantages-tablet.webp");
     padding-top: 90px;
     padding-bottom: 100px;
     margin-top: 94px;
 
     @media (min-resolution: 2dppx) {
-      background-image: url("../img/advantages-tablet@2x.jpg");
+      background-image: url("../img/advantages-tablet@2x.webp");
     }
   }
 
   @include vp-767 {
-    background-image: url("../img/advantages-mobile.jpg");
+    background-image: url("../img/advantages-mobile.webp");
     padding-top: 60px;
     padding-bottom: 65px;
     margin-top: 64px;

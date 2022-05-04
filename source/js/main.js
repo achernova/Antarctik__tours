@@ -23,8 +23,8 @@ window.addEventListener('DOMContentLoaded', () => {
     initModals();
 
 
-  });
-});
+  }, {passive: true});
+}, {passive: true});
 
 // ---------------------------------
 

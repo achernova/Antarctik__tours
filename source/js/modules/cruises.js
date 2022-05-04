@@ -8,7 +8,7 @@ const getCruise = () => {
       }
       const card = evt.target.closest('[data-element="card"]');
       card.classList.add('is-active');
-    });
+    }, {passive: true});
   }
 };
 

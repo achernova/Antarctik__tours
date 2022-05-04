@@ -1,7 +1,7 @@
 .reservation {
   width: 100%;
   background-color: $color-tangaroa;
-  background-image: url("../img/reservation-bck.jpg");
+  background-image: url("../img/reservation-bck.webp");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -11,29 +11,29 @@
   padding-bottom: 54px;
 
   @media (min-resolution: 2dppx) {
-    background-image: url("../img/reservation-bck@2x.jpg");
+    background-image: url("../img/reservation-bck@2x.webp");
   }
 
   @include vp-1023 {
-    background-image: url("../img/reservation-bck-tab.jpg");
+    background-image: url("../img/reservation-bck-tab.webp");
     display: flex;
     flex-direction: column;
     margin-top: 100px;
     padding-bottom: 102px;
 
     @media (min-resolution: 2dppx) {
-      background-image: url("../img/reservation-bck-tab@2x.jpg");
+      background-image: url("../img/reservation-bck-tab@2x.webp");
     }
   }
 
   @include vp-767 {
-    background-image: url("../img/reservation-bck-mob.jpg");
+    background-image: url("../img/reservation-bck-mob.webp");
     margin-top: 64px;
     padding-top: 11px;
     padding-bottom: 65px;
 
     @media (min-resolution: 2dppx) {
-      background-image: url("../img/reservation-bck-mob@2x.jpg");
+      background-image: url("../img/reservation-bck-mob@2x.webp");
     }
   }
 }

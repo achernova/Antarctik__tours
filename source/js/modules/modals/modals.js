@@ -31,7 +31,7 @@ export class Modals {
 
   _init() {
     if (this._modalOpenElements.length) {
-      document.addEventListener('click', this._documentClickHandler);
+      document.addEventListener('click', this._documentClickHandler, {passive: true});
     }
   }
 
@@ -106,13 +106,13 @@ export class Modals {
   }
 
   _addListeners(modal) {
-    modal.addEventListener('click', this._modalClickHandler);
-    document.addEventListener('keydown', this._documentKeydownHandler);
+    modal.addEventListener('click', this._modalClickHandler, {passive: true});
+    document.addEventListener('keydown', this._documentKeydownHandler, {passive: true});
   }
 
   _removeListeners(modal) {
-    modal.removeEventListener('click', this._modalClickHandler);
-    document.removeEventListener('keydown', this._documentKeydownHandler);
+    modal.removeEventListener('click', this._modalClickHandler, {passive: true});
+    document.removeEventListener('keydown', this._documentKeydownHandler, {passive: true});
   }
 
   _stopInteractive(modal) {
@@ -140,7 +140,7 @@ export class Modals {
       return;
     }
 
-    document.removeEventListener('click', this._documentClickHandler);
+    document.removeEventListener('click', this._documentClickHandler, {passive: true});
 
     this._openedModalElement = document.querySelector('.modal.is-active');
 
@@ -167,13 +167,13 @@ export class Modals {
     setTimeout(() => {
       this._addListeners(modal);
       this._autoPlay(modal);
-      document.addEventListener('click', this._documentClickHandler);
+      document.addEventListener('click', this._documentClickHandler, {passive: true});
     }, this._eventTimeout);
   }
 
   close(modalName = this._modalName) {
     const modal = document.querySelector(`[data-modal="${modalName}"]`);
-    document.removeEventListener('click', this._documentClickHandler);
+    document.removeEventListener('click', this._documentClickHandler, {passive: true});
 
     if (!modal || !modal.classList.contains('is-active')) {
       return;
@@ -184,8 +184,8 @@ export class Modals {
     }
 
     modal.classList.remove('is-active');
-    this._removeListeners(modal);
-    this._stopInteractive(modal);
+    this._removeListeners(modal, {passive: true});
+    this._stopInteractive(modal, {passive: true});
 
     if (this._closeCallback) {
       this._closeCallback();
@@ -198,7 +198,7 @@ export class Modals {
     }
 
     setTimeout(() => {
-      document.addEventListener('click', this._documentClickHandler);
+      document.addEventListener('click', this._documentClickHandler, {passive: true});
     }, this._eventTimeout);
 
     this._setSettings('default');
