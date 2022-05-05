@@ -45,7 +45,7 @@
   grid-template-columns: 1fr 1fr;
 
   @media (max-width: 1160px) {
-    width: 1023px;
+    width: 1004px;
   }
 
   @include vp-1023 {
@@ -333,7 +333,6 @@
 
 .reservation__form-container--checkbox input {
   width: 20px;
-  display: none;
 }
 
 .reservation__form-container--checkbox input + label::before {

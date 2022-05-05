@@ -867,6 +867,8 @@ ul {
   -webkit-box-pack: end;
   -ms-flex-pack: end;
   justify-content: flex-end;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 .main-nav__item {
@@ -899,6 +901,9 @@ ul {
   z-index: 1;
   background-color: #002b66;
   opacity: 0;
+  -webkit-transition: opacity 0;
+  -o-transition: opacity 0;
+  transition: opacity 0;
 }
 
 .is-invalid .main-nav__overlay {
@@ -924,6 +929,9 @@ ul {
 .is-open .main-nav__overlay {
   visibility: visible;
   opacity: 0.5;
+  -webkit-transition: opacity 0.5;
+  -o-transition: opacity 0.5;
+  transition: opacity 0.5;
 }
 
 .is-open {
@@ -1045,6 +1053,7 @@ ul {
 .intro__img {
   margin: auto;
   margin-left: 20px;
+  margin-top: 0;
 }
 
 .advantages {
@@ -1081,6 +1090,8 @@ ul {
   -ms-flex-direction: row;
   flex-direction: row;
   gap: 40px;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 .advantages__item {
@@ -1157,23 +1168,6 @@ ul {
   grid-column-gap: 10px;
 }
 
-.is-active .cruises__info {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  background-color: #011c40;
-  position: absolute;
-  z-index: 1;
-  top: 0;
-  width: 260px;
-  text-align: left;
-  height: 386px;
-}
-
 .cruises__list h3 {
   position: absolute;
   z-index: 1;
@@ -1204,6 +1198,24 @@ ul {
   -ms-flex-pack: distribute;
   justify-content: space-around;
   margin-left: 25px;
+}
+
+.is-active .cruises__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  background-color: #011c40;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  width: 260px;
+  text-align: left;
+  height: 386px;
+  overflow-y: scroll;
 }
 
 .cruises__info-item {
@@ -1259,6 +1271,10 @@ ul {
   cursor: pointer;
 }
 
+.cruises__button:focus {
+  outline: 3px solid #808080;
+}
+
 .cruises__info--elain .cruises__info-item {
   margin-bottom: 8px;
 }
@@ -1272,14 +1288,6 @@ ul {
   margin: 0 auto;
   width: 260px;
   cursor: pointer;
-}
-
-.cruises__item:focus {
-  outline: 2px solid #011c40;
-}
-
-.cruises__info:focus {
-  outline: 2px solid #011c40;
 }
 
 .reservation {
@@ -1436,7 +1444,6 @@ ul {
 
 .reservation__form-container--checkbox input {
   width: 20px;
-  display: none;
 }
 
 .reservation__form-container--checkbox input + label::before {
@@ -1546,6 +1553,7 @@ ul {
   line-height: 24px;
   padding-left: 30px;
   margin: 0;
+  margin-bottom: 20px;
 }
 
 .contacts__phone::before {
@@ -1603,6 +1611,8 @@ ul {
   -ms-flex-pack: start;
   justify-content: flex-start;
   padding-left: 40px;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 .page-footer__item {
@@ -1631,6 +1641,8 @@ ul {
   margin-top: 18px;
   padding: 0;
   padding-right: 2px;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 .page-footer__social-item {
@@ -1671,6 +1683,7 @@ ul {
     width: 260px;
     text-align: left;
     height: 386px;
+    overflow-y: scroll;
   }
 
   .page-footer__link:hover {
@@ -1716,7 +1729,7 @@ ul {
   }
 
   .reservation__container {
-    width: 1023px;
+    width: 1004px;
   }
 
   .reservation__description {
@@ -1728,7 +1741,7 @@ ul {
   }
 
   .contacts {
-    width: 1023px;
+    width: 1004px;
   }
 
   .page-footer__container {
@@ -1856,12 +1869,12 @@ ul {
     grid-column-gap: 24px;
   }
 
-  .is-active .cruises__info {
-    width: 309px;
-  }
-
   .cruises__list h3 {
     top: 313px;
+  }
+
+  .is-active .cruises__info {
+    width: 309px;
   }
 
   .cruises__button {
@@ -2025,7 +2038,7 @@ ul {
 
   .page-footer__list {
     width: 500px;
-    padding-left: 0;
+    padding-left: 7px;
   }
 
   .page-footer__item {
@@ -2036,7 +2049,7 @@ ul {
 
   .page-footer__social-list {
     padding-left: 0;
-    width: 100px;
+    width: 111px;
   }
 
   .page-footer__social-item {
@@ -2193,7 +2206,7 @@ ul {
   }
 
   .advantages__list {
-    width: 290px;
+    width: 100%;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
@@ -2201,10 +2214,14 @@ ul {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
+    padding-left: 30px;
+    padding-right: 30px;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
   }
 
   .advantages__item {
-    width: 290px;
+    width: 100%;
     margin-bottom: 2px;
   }
 
@@ -2245,13 +2262,13 @@ ul {
     width: 320px;
   }
 
-  .is-active .cruises__info {
-    width: 270px;
-  }
-
   .cruises__list h3 {
     top: 323px;
     left: 26px;
+  }
+
+  .is-active .cruises__info {
+    width: 270px;
   }
 
   .cruises__button {
@@ -2456,6 +2473,7 @@ ul {
     flex-direction: column;
     padding: 0;
     margin-bottom: 0;
+    padding-left: 0;
   }
 
   .page-footer__item {
@@ -2469,6 +2487,8 @@ ul {
     -webkit-box-pack: start;
     -ms-flex-pack: start;
     justify-content: flex-start;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
   }
 
   .page-footer__social-item {
@@ -2503,6 +2523,14 @@ ul {
 
   .intro__container p {
     margin-top: 14px;
+    width: 290px;
+  }
+
+  .advantages__list {
+    width: 290px;
+  }
+
+  .advantages__item {
     width: 290px;
   }
 

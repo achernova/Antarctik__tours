@@ -87,6 +87,7 @@
 .intro__img {
   margin: auto;
   margin-left: 20px;
+  margin-top: 0;
 
   @include vp-1023 {
     margin-left: 0;

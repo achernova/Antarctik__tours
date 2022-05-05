@@ -65,6 +65,7 @@
   display: flex;
   flex-direction: row;
   gap: 40px;
+  flex-wrap: wrap;
 
   @media (max-width: 1160px) {
     justify-content: center;
@@ -77,9 +78,16 @@
   }
 
   @include vp-767 {
-    width: 290px;
+    width: 100%;
     flex-direction: column;
     align-items: center;
+    padding-left: 30px;
+    padding-right: 30px;
+    flex-wrap: nowrap;
+  }
+
+  @include vp-374 {
+    width: 290px;
   }
 }
 
@@ -108,8 +116,12 @@
   }
 
   @include vp-767 {
-    width: 290px;
+    width: 100%;
     margin-bottom: 2px;
+  }
+
+  @include vp-374 {
+    width: 290px;
   }
 }
 
