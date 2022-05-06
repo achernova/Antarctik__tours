@@ -798,9 +798,9 @@ ul {
   -webkit-box-direction: normal;
   -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
@@ -808,7 +808,7 @@ ul {
 }
 
 .page-header__logo {
-  margin-top: 5px;
+  margin-top: 10px;
 }
 
 .page-header__intro {
@@ -911,7 +911,7 @@ ul {
 .is-invalid .main-nav__toggle::before {
   content: "";
   position: absolute;
-  top: 17px;
+  top: 27px;
   right: 14px;
   width: 24px;
   height: 2px;
@@ -1579,13 +1579,17 @@ ul {
   -webkit-box-direction: normal;
   -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
   width: 1160px;
+}
+
+.page-footer__logo {
+  margin-top: 5px;
 }
 
 .page-footer__logo-icon {
@@ -1610,6 +1614,7 @@ ul {
   padding-left: 40px;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  margin-top: 17px;
 }
 
 .page-footer__item {
@@ -1657,6 +1662,12 @@ ul {
   .btn:hover,
   .btn:focus {
     opacity: 0.8;
+  }
+}
+
+@media (min-width: 1023px) {
+  .is-active .cruises__info {
+    height: 325px;
   }
 }
 
@@ -1746,6 +1757,12 @@ ul {
   }
 }
 
+@media (max-width: 1159px) {
+  .is-active .cruises__info {
+    max-height: 325px;
+  }
+}
+
 @media (max-width: 1023px) {
   .page-header {
     background-image: url("../img/Header-tablet.webp");
@@ -1757,6 +1774,10 @@ ul {
     padding-left: 17px;
     padding-right: 22px;
     padding-top: 15px;
+  }
+
+  .page-header__logo {
+    margin-top: 13px;
   }
 
   .page-header__intro h2 {
@@ -2025,6 +2046,10 @@ ul {
     width: 678px;
   }
 
+  .page-footer__logo {
+    margin-top: 16px;
+  }
+
   .page-footer__logo-icon-dsk {
     display: none;
   }
@@ -2036,6 +2061,7 @@ ul {
   .page-footer__list {
     width: 500px;
     padding-left: 7px;
+    margin-top: 20px;
   }
 
   .page-footer__item {
@@ -2457,7 +2483,8 @@ ul {
   }
 
   .page-footer__logo {
-    margin-bottom: 30px;
+    margin-bottom: 27px;
+    margin-top: 3px;
   }
 
   .page-footer__list {
@@ -2468,6 +2495,7 @@ ul {
     flex-direction: column;
     padding: 0;
     margin-bottom: 0;
+    margin-top: 0;
     padding-left: 0;
   }
 

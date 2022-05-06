@@ -37,7 +37,7 @@
   padding-top: 24px;
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   max-width: 1160px;
 
@@ -59,7 +59,11 @@
 }
 
 .page-header__logo {
-  margin-top: 5px;
+  margin-top: 10px;
+
+  @include vp-1023 {
+    margin-top: 13px;
+  }
 
   @include vp-767 {
     margin-top: 0;

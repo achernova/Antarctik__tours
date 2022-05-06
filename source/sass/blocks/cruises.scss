@@ -102,6 +102,14 @@
   height: 386px;
   overflow-y: scroll;
 
+  @media (max-width: 1159px) {
+    max-height: 325px;
+  }
+
+  @media (min-width: 1023px) {
+    height: 325px;
+  }
+
   @include vp-1023 {
     width: 309px;
   }
