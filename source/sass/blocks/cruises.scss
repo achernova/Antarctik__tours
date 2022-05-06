@@ -49,12 +49,14 @@
   }
 
   @include vp-767 {
-    display: flex;
+    //display: flex;
+    display: -webkit-flex;
     flex-direction: column;
     align-items: center;
     width: 320px;
   }
 }
+
 .cruises__list h3 {
   position: absolute;
   z-index: 1;
@@ -222,6 +224,7 @@
   margin: 0 auto;
   width: 260px;
   cursor: pointer;
+  display: -webkit-inline-box;
 
   @include vp-1023 {
     width: 309px;

@@ -901,9 +901,7 @@ ul {
   z-index: 1;
   background-color: #002b66;
   opacity: 0;
-  -webkit-transition: opacity 0;
-  -o-transition: opacity 0;
-  transition: opacity 0;
+  --webkit-transition: opacity 0.5;
 }
 
 .is-invalid .main-nav__overlay {
@@ -929,9 +927,7 @@ ul {
 .is-open .main-nav__overlay {
   visibility: visible;
   opacity: 0.5;
-  -webkit-transition: opacity 0.5;
-  -o-transition: opacity 0.5;
-  transition: opacity 0.5;
+  --webkit-transition: opacity 0.5;
 }
 
 .is-open {
@@ -1288,6 +1284,7 @@ ul {
   margin: 0 auto;
   width: 260px;
   cursor: pointer;
+  display: -webkit-inline-box;
 }
 
 .reservation {
@@ -2249,9 +2246,7 @@ ul {
   }
 
   .cruises__list {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    display: -webkit-flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
