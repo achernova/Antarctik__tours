@@ -1196,24 +1196,6 @@ ul {
   margin-left: 25px;
 }
 
-.is-active .cruises__info {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  background-color: #011c40;
-  position: absolute;
-  z-index: 1;
-  top: 0;
-  width: 260px;
-  text-align: left;
-  height: 386px;
-  overflow-y: scroll;
-}
-
 .cruises__info-item {
   margin-bottom: 10px;
 }
@@ -1277,6 +1259,24 @@ ul {
 
 .cruises__info--elain .cruises__button {
   margin-top: 10px;
+}
+
+.is-active .cruises__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  background-color: #011c40;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  width: 260px;
+  text-align: left;
+  overflow-y: scroll;
+  height: 386px;
 }
 
 .cruises__item {
@@ -1665,12 +1665,6 @@ ul {
   }
 }
 
-@media (min-width: 1023px) {
-  .is-active .cruises__info {
-    height: 325px;
-  }
-}
-
 @media screen and (min-width: 1024px) {
   .main-nav__link:hover {
     color: #011c40;
@@ -1759,7 +1753,7 @@ ul {
 
 @media (max-width: 1159px) {
   .is-active .cruises__info {
-    max-height: 325px;
+    width: 325px;
   }
 }
 
@@ -1891,10 +1885,6 @@ ul {
     top: 313px;
   }
 
-  .is-active .cruises__info {
-    width: 309px;
-  }
-
   .cruises__button {
     width: 239px;
     padding-left: 61px;
@@ -1915,7 +1905,11 @@ ul {
   }
 
   .cruises__info--elain p {
-    width: 250px;
+    width: 245px;
+  }
+
+  .is-active .cruises__info {
+    width: 309px;
   }
 
   .cruises__item {
@@ -2272,24 +2266,16 @@ ul {
   }
 
   .cruises__list {
-    display: -webkit-flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+    display: -ms-grid;
+    display: grid;
     width: 320px;
   }
 
   .cruises__list h3 {
     top: 323px;
     left: 26px;
-  }
-
-  .is-active .cruises__info {
-    width: 270px;
   }
 
   .cruises__button {
@@ -2305,6 +2291,10 @@ ul {
 
   .cruises__info--elain .cruises__info-list {
     margin-left: 25px;
+  }
+
+  .is-active .cruises__info {
+    width: 270px;
   }
 
   .cruises__item {
@@ -2618,6 +2608,12 @@ ul {
   .contacts__container h3 {
     text-align: left;
     width: 286px;
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1159px) {
+  .cruises__item:hover .cruises__info {
+    height: 325px;
   }
 }
 
