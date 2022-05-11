@@ -100,7 +100,7 @@
   z-index: 1;
   background-color: $prussian-blue;
   opacity: 0;
-  --webkit-transition: opacity 0.5;
+  --webkit-transition: 0.5s;
 }
 
 .is-invalid .main-nav__overlay {
@@ -131,7 +131,8 @@
 .is-open .main-nav__overlay {
   visibility: visible;
   opacity: 0.5;
-  --webkit-transition: opacity 0.5;
+  --webkit-transition: opacity 0.5s;
+  transition: opacity 0.5s;
 }
 
 .is-open {

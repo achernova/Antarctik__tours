@@ -901,7 +901,7 @@ ul {
   z-index: 1;
   background-color: #002b66;
   opacity: 0;
-  --webkit-transition: opacity 0.5;
+  --webkit-transition: 0.5s;
 }
 
 .is-invalid .main-nav__overlay {
@@ -927,7 +927,10 @@ ul {
 .is-open .main-nav__overlay {
   visibility: visible;
   opacity: 0.5;
-  --webkit-transition: opacity 0.5;
+  --webkit-transition: opacity 0.5s;
+  -webkit-transition: opacity 0.5s;
+  -o-transition: opacity 0.5s;
+  transition: opacity 0.5s;
 }
 
 .is-open {
